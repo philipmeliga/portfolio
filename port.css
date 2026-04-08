@@ -212,7 +212,7 @@ section .title::after {
 /*  Home  */
 .home {
   display: flex;
-  background: url("/storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit user files/Personal portfolio/tech.jpg") no-repeat
+  background: url("tech.jpg") no-repeat
     center;
   height: 100vh;
   color: #fff;

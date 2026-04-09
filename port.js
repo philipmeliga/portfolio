@@ -51,10 +51,11 @@ document.getElementById("contact-form")
     "template_tn7t6zo",  // replace
     this
   )
-  .then(function() {
-    alert("Message sent successfully!");
-  }, function(error) {
-    alert("Failed to send message: " + error.text);
+  .then(()=> {
+    document.getElementById("status").innerText = "Message sent successfully!";
+    this.reset();
+  }, (error) => {
+    document.getElementById("status").innerText = "Failed to send message.";
   });
 });
 

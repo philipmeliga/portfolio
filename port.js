@@ -35,6 +35,29 @@ $(document).ready(function () {
     $(".navbar .menu").toggleClass("active");
     $(".menu-btn i").toggleClass("active");
   });
+  
+  // email JS
+  
+(function(){
+  emailjs.init("7-hC_j5cqEFd5hXL1"); // replace this
+})();
+
+document.getElementById("contact-form")
+.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_0sz40en",   // replace
+    "template_tn7t6zo",  // replace
+    this
+  )
+  .then(function() {
+    alert("Message sent successfully!");
+  }, function(error) {
+    alert("Failed to send message: " + error.text);
+  });
+});
+
 
   //  Typing Text Animation  //
 

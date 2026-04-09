@@ -282,7 +282,7 @@
             <!-- Reach -->
             <div class="column right">
               <div class="text">Message me</div>
-              <form action="send.php" method ="POST">
+              <form id="contact-form"  >
                 <div class="fields">
                   <div class="field name">
                     <input type="text" name="name" placeholder="Your Name" required>
@@ -303,23 +303,7 @@
               </form>
               
               
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
 
-    $to = "philipmeliga01@gmail.com";
-    $subject = "New Message from Website";
-    $body = "Name: $name\nEmail: $email\nMessage:\n$message";
-
-    if (mail($to, $subject, $body)) {
-        echo "Message sent!";
-    } else {
-        echo "Failed to send.";
-    }
-}
-?>
               
             </div>
           </div>
@@ -337,6 +321,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
     <script src="/portfolio/port.js"></script>
   </body>
 </html>
